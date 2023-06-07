@@ -7,8 +7,8 @@ type Props = {
   recipe: Recipe;
 };
 
-export const RecipeCard: FC<Props> = ({
-  recipe: { image, name, description, numLikes },
+export const RecipeListItem: FC<Props> = ({
+  recipe: { image, name, description, numLikes, isPublic },
 }) => {
   return (
     <article>
@@ -21,7 +21,7 @@ export const RecipeCard: FC<Props> = ({
             height={200}
             className="aspect-square rounded-2xl"
           />
-          {numLikes > 0 && (
+          {numLikes > 0 && isPublic && (
             <span className="absolute top-2 right-2 text-white text-sm px-1.5 py-2 flex items-center gap-x-1 leading-none rounded-full bg-[rgba(4,0,19,0.48)]">
               <span>♡</span>
               {numLikes}
