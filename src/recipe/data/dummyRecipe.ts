@@ -1,4 +1,4 @@
-import { Recipe } from '@/types/Recipe';
+import { Recipe } from '@/recipe/types/Recipe';
 
 // 日本語でダミーレシピを作成
 export const dummyRecipeList: Recipe[] = [
@@ -6,7 +6,8 @@ export const dummyRecipeList: Recipe[] = [
     id: '1',
     ownerId: '1',
     name: 'ハンバーグハンバーグハンバーグハンバーグハンバーグハンバーグハンバーグハンバーグ',
-    description: 'おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方',
+    description:
+      'おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方おいしいハンバーグの作り方',
     ingredients: [
       {
         name: '牛ひき肉',
