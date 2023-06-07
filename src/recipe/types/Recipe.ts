@@ -8,7 +8,7 @@ export type Recipe = {
   image: string;
   numLikes: number;
   numServings: number;
-  public: boolean;
+  isPublic: boolean;
   links: string[];
 }
 
