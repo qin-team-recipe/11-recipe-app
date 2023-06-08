@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Spinner } from '@/app/search/components/Spinner';
 import { useDebounce } from '@/app/search/hooks/useDebounce';
@@ -13,16 +13,19 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [debouncedSearchTerm, isDebouncing] = useDebounce(searchTerm, 1000);
 
+  const hasTypedRef = useRef(false);
+
   useEffect(() => {
     // TODO: 検索が空の場合に走らせるかを検討
-    // 走らせる場合ロード時は避けたいのでフラッグを追加？
     // if (debouncedSearchTerm === '') return;
+    if (!hasTypedRef.current) return;
     performSearch(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
     setSearchTerm(value);
+    hasTypedRef.current = true;
   };
 
   const performSearch = (value: string) => {
