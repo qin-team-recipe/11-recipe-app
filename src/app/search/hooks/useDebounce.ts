@@ -8,11 +8,13 @@ export const useDebounce = (
   const [isDebouncing, setIsDebouncing] = useState(false);
 
   useEffect(() => {
+    // valueが空文字の場合はdebounceしないで即時反映
     if(value === '') {
       setDebouncedValue('');
       setIsDebouncing(false);
       return;
     }
+
     setIsDebouncing(true);
 
     const debounceTimeout = setTimeout(() => {
