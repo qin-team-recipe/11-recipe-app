@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Spinner } from '@/app/search/components/Spinner';
+import { useDebounce } from '@/app/search/hooks/useDebounce';
 
 type Props = {
   isSearchPage?: boolean;
@@ -10,42 +11,18 @@ type Props = {
 
 export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
-  const [isDebouncing, setIsDebouncing] = useState(false);
+  const [debouncedSearchTerm, isDebouncing] = useDebounce(searchTerm, 1000);
 
-  let debounceTimeout: NodeJS.Timeout;
+  useEffect(() => {
+    // 検索が空の場合に走らせるかは要検討
+    // if (debouncedSearchTerm === '') return;
+    performSearch(debouncedSearchTerm);
+  }, [debouncedSearchTerm]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
     setSearchTerm(value);
-
-    // If the search term is empty, don't debounce
-    if (value === '') return;
-
-    setIsDebouncing(true);
-    clearTimeout(debounceTimeout);
   };
-
-  useEffect(() => {
-    if (searchTerm === '') {
-      setIsDebouncing(false);
-      setDebouncedSearchTerm('');
-      return;
-    }
-    setIsDebouncing(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    debounceTimeout = setTimeout(() => {
-      setDebouncedSearchTerm(searchTerm);
-      setIsDebouncing(false);
-    }, 1000);
-    return () => {
-      clearTimeout(debounceTimeout);
-    };
-  }, [searchTerm]);
-
-  useEffect(() => {
-    performSearch(debouncedSearchTerm);
-  }, [debouncedSearchTerm]);
 
   const performSearch = (value: string) => {
     console.log('Searching for:', value);
