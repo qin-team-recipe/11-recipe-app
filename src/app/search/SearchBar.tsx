@@ -14,7 +14,7 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
   const [debouncedSearchTerm, isDebouncing] = useDebounce(searchTerm, 1000);
 
   useEffect(() => {
-    // 検索が空の場合に走らせるかは要検討
+    // TODO: 検索が空の場合に走らせるかを検討
     // if (debouncedSearchTerm === '') return;
     performSearch(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
@@ -26,12 +26,11 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
 
   const performSearch = (value: string) => {
     console.log('Searching for:', value);
-    // Perform your search operation here
+    // TODO: 検索処理
   };
 
   return (
     <div className="w-full flex items-center gap-x-4">
-      {/* {isDebouncing && <p>Debouncing...</p>} */}
       {isSearchPage && (
         <button type="button" className="flex-shrink-0">
           <Image
