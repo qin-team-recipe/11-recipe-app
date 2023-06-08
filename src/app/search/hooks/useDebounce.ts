@@ -9,7 +9,7 @@ export const useDebounce = (
 
   useEffect(() => {
     // valueが空文字の場合はdebounceしないで即時反映
-    if(value === '') {
+    if (value === '') {
       setDebouncedValue('');
       setIsDebouncing(false);
       return;
