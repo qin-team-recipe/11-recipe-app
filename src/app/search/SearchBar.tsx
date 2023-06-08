@@ -15,6 +15,7 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
 
   useEffect(() => {
     // TODO: 検索が空の場合に走らせるかを検討
+    // 走らせる場合ロード時は避けたいのでフラッグを追加？
     // if (debouncedSearchTerm === '') return;
     performSearch(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
