@@ -12,7 +12,6 @@ type Props = {
 export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [debouncedSearchTerm, isDebouncing] = useDebounce(searchTerm, 1000);
-
   const hasTypedRef = useRef(false);
 
   useEffect(() => {
@@ -22,9 +21,8 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
     performSearch(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-    setSearchTerm(value);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
     hasTypedRef.current = true;
   };
 
@@ -35,6 +33,7 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
 
   return (
     <div className="w-full flex items-center gap-x-4">
+      {/* 検索ページでのみ戻るボタンを表示 */}
       {isSearchPage && (
         <button type="button" className="flex-shrink-0">
           <Image
@@ -46,9 +45,10 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
         </button>
       )}
       <form
-        action=""
+        onSubmit={(e) => e.preventDefault()}
         className="flex-1 flex items-center bg-mauve-4 h-10 px-4 gap-x-3 font-bold rounded-xl py-1"
       >
+        {/* // TOPページのみ検索アイコンを表示 */}
         {!isSearchPage && (
           <div className="flex-shrink-0 flex items-center">
             <Image
@@ -67,6 +67,8 @@ export const SearchBar: FC<Props> = ({ isSearchPage = false }) => {
           onChange={handleSearchChange}
         />
         <div className="w-5 h-5 flex items-center">
+          {/* Debounce中はSpinnerを表示 */}
+          {/* Debounce中でなく、検索文字列が空でない場合はクリアボタンを表示 */}
           {isDebouncing ? (
             <Spinner />
           ) : searchTerm ? (
