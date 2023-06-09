@@ -2,8 +2,8 @@
 
 import { FC, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { Spinner } from '@/app/search/components/Spinner';
-import { useDebounce } from '@/app/search/hooks/useDebounce';
+import { Spinner } from './_Spinner';
+import { useDebounce } from './useDebounce';
 
 type Props = {
   isSearchPage?: boolean;
