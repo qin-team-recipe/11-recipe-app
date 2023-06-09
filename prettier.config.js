@@ -2,6 +2,11 @@
 module.exports = {
   // prettier
   printWidth: 120,
+  tabWidth: 2,
+  singleQuote: true,
+  trailingComma: "es5",
+  semi: true,
+  useTabs: false,
 
   // @ianvs/prettier-plugin-sort-imports
   plugins: ["@ianvs/prettier-plugin-sort-imports"],
