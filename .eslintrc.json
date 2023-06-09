@@ -21,7 +21,30 @@
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": ["function", "method"],
+        "format": ["camelCase"]
+      },
+      {
+        "selector": ["variable", "parameter"],
+        "types": ["boolean", "string", "number", "array"],
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["camelCase"],
+        "prefix": ["no", "is", "has", "should"],
+        "filter": { "regex": "^_", "match": false }
+      }
+    ]
   },
   "globals": {
     "JSX": "readonly",
