@@ -30,7 +30,7 @@
       },
       {
         "selector": ["function", "method"],
-        "format": ["camelCase"]
+        "format": ["camelCase", "PascalCase"]
       },
       {
         "selector": ["variable", "parameter"],
@@ -40,7 +40,7 @@
       {
         "selector": "variable",
         "types": ["boolean"],
-        "format": ["camelCase"],
+        "format": ["PascalCase"],
         "prefix": ["no", "is", "has", "should"],
         "filter": { "regex": "^_", "match": false }
       }
