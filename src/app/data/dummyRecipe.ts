@@ -1,4 +1,4 @@
-import { Recipe } from '@/recipe/types/Recipe';
+import { Recipe } from '@/app/types/Recipe';
 
 // 日本語でダミーレシピを作成
 export const dummyRecipeList: Recipe[] = [
@@ -41,8 +41,7 @@ export const dummyRecipeList: Recipe[] = [
     instructions: [
       {
         title: '1. 材料を混ぜる',
-        description:
-          'ボウルに牛ひき肉、玉ねぎ、パン粉、牛乳、卵、塩、こしょうを入れてよく混ぜる',
+        description: 'ボウルに牛ひき肉、玉ねぎ、パン粉、牛乳、卵、塩、こしょうを入れてよく混ぜる',
       },
       {
         title: '2. 形を整える',

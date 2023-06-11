@@ -1,7 +1,9 @@
-import { RecipeListItem } from '@/recipe/components/RecipeListItem';
-import { dummyRecipeList } from '@/recipe/data/dummyRecipe';
-import { Recipe } from '@/recipe/types/Recipe';
 import React, { FC } from 'react';
+
+import { RecipeListItem } from './RecipeListItem';
+import { dummyRecipeList } from '@/app/data/dummyRecipe';
+
+import { Recipe } from '@/app/types/Recipe';
 
 type Props = {
   recipeList: Recipe[];
@@ -37,7 +39,7 @@ export const RecipeListVertical: FC<Props> = ({ recipeList }) => {
 export const RecipeListHorizontal: FC<Props> = ({ recipeList }) => {
   const recipe = recipeList.length > 0 ? recipeList : dummyRecipeList;
   return (
-    <ul className="flex gap-x-[4%] overflow-x-scroll hidden-scrollbar">
+    <ul className="hidden-scrollbar flex gap-x-[4%] overflow-x-scroll">
       {recipe.map((recipe) => (
         <li key={recipe.id} className="w-[44%] flex-shrink-0">
           <RecipeListItem recipe={recipe} />
