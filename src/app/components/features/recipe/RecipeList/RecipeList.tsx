@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import { dummyRecipeList } from '../../../../data/dummyRecipe';
-import { Recipe } from '../../../../types/recipe';
+import { dummyRecipeList } from '@/app/data/dummyRecipe';
+import { Recipe } from '@/app/types/recipe';
 import { RecipeListItem } from './RecipeListItem';
 
 type Props = {
