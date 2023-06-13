@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Recipe } from '@/app/types/recipe';
+import { Recipe } from '@/app/types/Recipe';
 
 type Props = {
   recipe: Recipe;
