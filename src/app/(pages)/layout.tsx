@@ -1,7 +1,7 @@
 import '@/app/globals.css';
 
-import { FC, ReactNode } from 'react';
 import { Inter } from 'next/font/google';
+import { SideNav } from '@/app/components/parts/SideNav';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,14 +14,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Container>{children}</Container>
+        <div className='flex justify-center mx-auto min-h-screen sm:gap-5 sm:max-w-[772px] sm:px-4'>
+          <nav className='w-60 shrink-0 hidden sm:block'>
+            <SideNav />  
+          </nav>
+          <main className="mx-auto flex-1 sm:border-x sm:border-mauve-6 relative pb-footer sm:max-w-[30rem]">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
-}
-
-const Container: FC<{ children: ReactNode }> = ({ children }) => (
-  <div className="bg-white mx-auto flex min-h-screen max-w-[390px] items-center justify-center border-x border-gray-12 px-4">
-    {children}
-  </div>
-);
+};

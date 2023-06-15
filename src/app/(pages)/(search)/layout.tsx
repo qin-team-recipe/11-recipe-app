@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function SearchLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col h-full'>
       <SearchBar />
       {children}
     </div>
