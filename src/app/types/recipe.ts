@@ -10,14 +10,14 @@ export type Recipe = {
   numServings: number;
   isPublic: boolean;
   links: string[];
-}
+};
 
 export type Instruction = {
   title: string;
   description: string;
-}
+};
 
 export type Ingredient = {
   name: string;
   description: string;
-}
+};

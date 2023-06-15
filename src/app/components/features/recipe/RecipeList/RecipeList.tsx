@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import { dummyRecipeList } from '@/app/data/dummyRecipe';
 import { Recipe } from '@/app/types/Recipe';
+
 import { RecipeListItem } from './RecipeListItem';
 
 type Props = {

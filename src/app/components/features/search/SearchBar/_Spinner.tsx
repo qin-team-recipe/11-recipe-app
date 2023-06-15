@@ -2,7 +2,7 @@ export const Spinner = () => (
   <div role="status">
     <svg
       aria-hidden="true"
-      className="w-5 h-5 text-mauve-9 animate-spin fill-mauve-12"
+      className="h-5 w-5 animate-spin fill-mauve-12 text-mauve-9"
       viewBox="0 0 100 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

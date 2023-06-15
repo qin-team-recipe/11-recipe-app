@@ -8,7 +8,7 @@ type Props = {
   recipe: Recipe;
 };
 
-export const RecipeListItem: FC<Props> = ({ recipe: {id, image, name, description, numLikes, isPublic } }) => {
+export const RecipeListItem: FC<Props> = ({ recipe: { id, image, name, description, numLikes, isPublic } }) => {
   return (
     <article>
       <Link href={`/recipe/${id}`}>
