@@ -16,7 +16,7 @@ module.exports = {
         'footer': '52px',
       },
       padding: {
-        'footer': '52px',
+        'footer': '64px',
       }
     },
   },
