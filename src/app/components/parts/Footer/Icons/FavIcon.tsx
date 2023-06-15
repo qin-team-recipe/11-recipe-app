@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { IconProps } from './props';
+import { IconProps } from './propsType';
 
 const FavIcon: FC<IconProps> = ({ width, height }) => {
   return (

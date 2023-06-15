@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { IconProps } from './props';
+import { IconProps } from './propsType';
 
 export const SearchIcon: FC<IconProps> = ({ width, height }) => {
   return (
