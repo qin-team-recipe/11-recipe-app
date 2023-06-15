@@ -20,6 +20,4 @@ export type Instruction = {
 export type Ingredient = {
   name: string;
   description: string;
-  // quantity: number;
-  // unit: string;
 }
