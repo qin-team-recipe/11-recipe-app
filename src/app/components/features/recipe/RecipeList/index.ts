@@ -1,1 +1,2 @@
-export { RecipeListVertical, RecipeListHorizontal } from './RecipeList';
+export { RecipeListVertical } from './RecipeListVertical';
+export { RecipeListHorizontal } from './RecipeListHorizontal';
