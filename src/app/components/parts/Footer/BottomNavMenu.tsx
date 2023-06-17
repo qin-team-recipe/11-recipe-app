@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { CartIcon } from '@/app/components/parts/Footer/Icons/CartIcon';
-import FavIcon from '@/app/components/parts/Footer/Icons/FavIcon';
-import { SearchIcon } from '@/app/components/parts/Footer/Icons/SearchIcon';
+import { CartIcon } from './Icons/CartIcon';
+import { FavIcon } from './Icons/FavIcon';
+import { SearchIcon } from './Icons/SearchIcon';
 
 export const BottomNavMenu = () => {
   const path = usePathname();
