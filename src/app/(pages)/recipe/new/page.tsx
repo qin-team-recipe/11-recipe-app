@@ -4,7 +4,7 @@ const AddRecipePage = () => {
   return (
     <div>
       <p>AddRecipePage</p>
-      <Link href="/draft">下書き</Link>
+      <Link href="/recipe/draft">下書き</Link>
     </div>
   );
 };
