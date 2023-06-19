@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Recipe } from '@/app/types/Recipe';
+import { Recipe } from '@/app/_types/Recipe';
 
 type Props = {
   recipe: Recipe;
@@ -15,7 +15,7 @@ export const RecipeListItem: FC<Props> = ({ recipe: { id, image, name, descripti
         <div className="relative aspect-square">
           <Image src={image} alt={`${name}の画像`} fill className="rounded-2xl object-cover" />
           {numLikes > 0 && isPublic && (
-            <span className="text-[#fff] absolute right-2 top-2 flex items-center gap-x-1 rounded-full bg-[rgba(4,0,19,0.48)] px-1.5 py-2 text-sm leading-none">
+            <span className="absolute right-2 top-2 flex items-center gap-x-1 rounded-full bg-[rgba(4,0,19,0.48)] px-1.5 py-2 text-sm leading-none text-[#fff]">
               <span>♡</span>
               {numLikes}
             </span>

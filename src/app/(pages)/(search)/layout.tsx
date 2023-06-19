@@ -1,4 +1,4 @@
-import { SearchBar } from '@/app/components/features/search/SearchBar';
+import { SearchBar } from '@/app/_components/features/search/SearchBar';
 
 export const metadata = {
   title: 'Home',
