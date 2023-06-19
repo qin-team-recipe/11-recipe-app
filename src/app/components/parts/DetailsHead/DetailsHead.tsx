@@ -13,7 +13,7 @@ export const DetailsHead: FC<Props> = ({ title, description, image }) => {
   return (
     <div className="relative">
       <div className="space-y-4">
-        <Image src={image} alt={`${title}の画像`} width={500} height={500} />
+        <Image src={image} alt={`${title}の画像`} width={500} height={500} className='aspect-square' />
         <h1 className="text-[28px] font-bold">{title}</h1>
         <p>{description}</p>
       </div>
