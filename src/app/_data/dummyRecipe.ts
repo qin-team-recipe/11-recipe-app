@@ -1,4 +1,4 @@
-import { Recipe } from '../_types/Recipe';
+import { Recipe } from '@/app/_types/Recipe';
 
 // 日本語でダミーレシピを作成
 export const dummyRecipeList: Recipe[] = [
