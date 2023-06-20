@@ -1,0 +1,1 @@
+export { CommonDetailsInfo } from './CommonDetailsInfo';
