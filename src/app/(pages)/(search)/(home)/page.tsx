@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { RecipeListHorizontal } from '@/app/components/features/recipe/RecipeList';
+import { RecipeListHorizontal } from '@/app/_components/features/recipe/RecipeList';
 
 export default function Home() {
   return (

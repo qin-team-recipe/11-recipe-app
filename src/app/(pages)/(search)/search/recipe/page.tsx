@@ -2,8 +2,8 @@
 
 import { useSearchParams } from 'next/navigation';
 
-import { RecipeListVertical } from '@/app/components/features/recipe/RecipeList';
-import { SearchToggle } from '@/app/components/features/search/SearchToggle/SearchToggle';
+import { RecipeListVertical } from '@/app/_components/features/recipe/RecipeList';
+import { SearchToggle } from '@/app/_components/features/search/SearchToggle/SearchToggle';
 
 const SearchRecipePage = () => {
   const searchParams = useSearchParams();

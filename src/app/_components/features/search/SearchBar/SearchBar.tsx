@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { usePathname, useRouter, useSelectedLayoutSegment } from 'next/navigation';
 
 import { Spinner } from './_Spinner';
@@ -34,13 +34,18 @@ export const SearchBar = () => {
     hasTypedRef.current = true;
   };
 
+  const handleBackButtonClick = () => {
+    setSearchTerm('');
+    router.push('/');
+  };
+
   return (
     <div className="flex w-full items-center gap-x-4 border-b border-mauve-6 px-4 py-2">
       {/* 検索ページでのみ戻るボタンを表示 */}
       {isSearchPage && (
-        <Link href="/" className="flex-shrink-0">
+        <button className="flex-shrink-0" onClick={handleBackButtonClick}>
           <Image src="/assets/icons/BackIcon-dark.svg" alt="戻る" width={20} height={20} />
-        </Link>
+        </button>
       )}
       <form
         onSubmit={(e) => e.preventDefault()}

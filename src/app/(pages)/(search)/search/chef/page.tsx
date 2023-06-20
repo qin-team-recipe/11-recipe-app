@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 
-import { SearchToggle } from '@/app/components/features/search/SearchToggle/SearchToggle';
+import { SearchToggle } from '@/app/_components/features/search/SearchToggle/SearchToggle';
 
 const SearchChefPage = () => {
   const searchParams = useSearchParams();

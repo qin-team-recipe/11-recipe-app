@@ -2,7 +2,7 @@ import '@/app/globals.css';
 
 import { Inter } from 'next/font/google';
 
-import { SideNav } from '@/app/components/parts/SideNav';
+import { SideNav } from '@/app/_components/parts/SideNav';
 
 const inter = Inter({ subsets: ['latin'] });
 
