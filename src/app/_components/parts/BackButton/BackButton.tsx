@@ -4,7 +4,7 @@ import { FC } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-import { BackIcon } from '@/app/components/parts/BackButton/BackIcon';
+import { BackIcon } from '@/app/_components/parts/BackButton/BackIcon';
 
 type Props = {
   href?: string | null;
