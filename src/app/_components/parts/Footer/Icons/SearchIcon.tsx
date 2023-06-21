@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { IconProps } from '@/app/types/IconProps';
+import { IconProps } from '@/app/_types/IconProps';
 
 export const SearchIcon: FC<IconProps> = ({ width, height }) => {
   return (
@@ -15,9 +15,9 @@ export const SearchIcon: FC<IconProps> = ({ width, height }) => {
       <path
         d="M17.5 17.5L13.875 13.875"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { IconProps } from '@/app/types/IconProps';
+import { IconProps } from '@/app/_types/IconProps';
 
 export const CartIcon: FC<IconProps> = ({ width, height }) => {
   return (
