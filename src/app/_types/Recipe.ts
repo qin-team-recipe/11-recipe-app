@@ -1,4 +1,4 @@
-import { Chef, Like, ShoppingList } from '@/app/_types/Backend';
+import { Chef } from '@/app/_types';
 
 type RecipeStatus = 'CREATING' | 'DRAFT' | 'PUBLISHED' | 'UNPUBLISHED';
 
@@ -10,17 +10,19 @@ export type Recipe = {
   overview: string;
   servingSize: number;
   status: RecipeStatus;
-  likes: Like[];
+  // likes: Like[];
+  numLikes: number; // FE only
   recipeImages: RecipeImage[];
   recipeSteps: RecipeStep[];
   recipeIngredients: RecipeIngredient[];
-  shoppingLists: ShoppingList[];
-  recipeLinks: RecipeLink[];
+  // shoppingLists: ShoppingList[];
+  // recipeLinks: RecipeLink[];
+  isPublic: boolean; // FE only
 };
 
 type RecipeStep = {
   id: string;
-  recipe: Recipe;
+  // recipe: Recipe;
   recipeId: string;
   step: number;
   description: string;
@@ -28,21 +30,21 @@ type RecipeStep = {
 
 type RecipeIngredient = {
   id: string;
-  recipe: Recipe;
+  // recipe: Recipe;
   recipeId: string;
   text: string;
 };
 
-type RecipeLink = {
-  id: string;
-  url: string;
-  recipe: Recipe;
-  recipeId: string;
-};
+// type RecipeLink = {
+//   id: string;
+//   url: string;
+//   recipe: Recipe;
+//   recipeId: string;
+// };
 
 type RecipeImage = {
   id: string;
-  recipe: Recipe;
+  // recipe: Recipe;
   recipeId: string;
   imageUrl: string;
 };

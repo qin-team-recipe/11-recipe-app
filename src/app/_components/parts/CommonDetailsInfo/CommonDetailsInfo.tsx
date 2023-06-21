@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 
 import { BackButton } from '@/app/_components/parts/BackButton';
-import { Chef, Recipe } from '@/app/_types/Backend';
+import { Chef, Recipe } from '@/app/_types';
 
 type Props = {
   title: Recipe['name'] | Chef['name'];

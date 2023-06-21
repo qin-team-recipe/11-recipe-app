@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { dummyRecipeList } from '@/app/_data/dummyRecipe';
-import { Recipe } from '@/app/_types/Backend';
+import { Recipe } from '@/app/_types/Recipe';
 
 import { RecipeListItem } from './RecipeListItem';
 

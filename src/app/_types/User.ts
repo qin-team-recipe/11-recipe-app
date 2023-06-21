@@ -1,12 +1,14 @@
-import { Chef, Follow, Like, ShoppingList, ShoppingMemo } from '@/app/_types/Backend';
+import { Chef, ShoppingList, ShoppingMemo } from '@/app/_types';
 
 export type User = {
   id: string;
   name: string;
   email: string;
   chef?: Chef;
-  follows: Follow[];
-  likes: Like[];
+  // follows: Follow[];
+  numFollows: number;
+  // likes: Like[];
+  numLikes: number;
   shoppingLists: ShoppingList[];
   shoppingMemos: ShoppingMemo[];
 };

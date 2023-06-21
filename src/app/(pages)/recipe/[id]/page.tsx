@@ -2,18 +2,14 @@ import { RecipeDetailsInfo } from '@/app/_components/features/recipe/RecipeDetai
 import { dummyRecipeList } from '@/app/_data/dummyRecipe';
 
 const RecipeDetailPage = ({ params }: { params: { id: string } }) => {
-  const { name, overview, recipeImages } = dummyRecipeList[0];
+  const recipe = dummyRecipeList.filter((item) => item.id === params.id);
+  if (!recipe) return <div></div>;
+
+  const { name, overview, recipeImages, numLikes, chef } = recipe[0];
+
   return (
     <div>
-      <RecipeDetailsInfo
-        name={name}
-        overview={overview}
-        images={recipeImages}
-        numLikes={100}
-        chefId="1"
-        chefName="しまぶ―"
-        chefImage="/assets/dummyImage_200_300.png"
-      />
+      <RecipeDetailsInfo name={name} overview={overview} recipeImages={recipeImages} numLikes={numLikes} chef={chef} />
       RecipeDetailPage: {params.id}
     </div>
   );

@@ -1,11 +1,9 @@
 import { FC } from 'react';
 
 import { dummyRecipeList } from '@/app/_data/dummyRecipe';
-import { Recipe as BackendRecipe } from '@/app/_types/Backend';
+import { Recipe } from '@/app/_types';
 
 import { RecipeListItem } from './RecipeListItem';
-
-type Recipe = Pick<BackendRecipe, 'id' | 'recipeImages' | 'name' | 'overview'> & { numLikes: number; isPublic: boolean };
 
 type Props = {
   recipeList: Recipe[];

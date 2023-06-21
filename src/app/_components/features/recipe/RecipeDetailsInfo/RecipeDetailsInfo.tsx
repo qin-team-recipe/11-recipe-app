@@ -6,11 +6,9 @@ import Link from 'next/link';
 
 import { CommonDetailsInfo } from '@/app/_components/parts/CommonDetailsInfo';
 import { FollowLikeButton } from '@/app/_components/parts/FollowLikeButton';
-import { Recipe } from '@/app/_types/Backend';
+import { Recipe } from '@/app/_types';
 
-type Props = {
-  numLikes: number;
-} & Pick<Recipe, 'name' | 'overview' | 'recipeImages' | 'chef'>;
+type Props = Pick<Recipe, 'name' | 'overview' | 'recipeImages' | 'chef' | 'numLikes'>;
 
 export const RecipeDetailsInfo: FC<Props> = ({ name, overview, recipeImages, numLikes, chef }) => {
   return (

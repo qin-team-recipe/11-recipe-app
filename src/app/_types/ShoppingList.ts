@@ -1,11 +1,11 @@
-import { Recipe, ShoppingListIngredient, User } from '@/app/_types/Backend';
+import { Recipe, ShoppingListIngredient } from '@/app/_types';
 
 export type ShoppingList = {
   id: string;
-  user: User;
+  // user: User;
   userId: string;
   recipe: Recipe;
   recipeId: string;
-  sortOrder: number;
+  // sortOrder: number;
   shoppingListIngredients: ShoppingListIngredient[];
 };

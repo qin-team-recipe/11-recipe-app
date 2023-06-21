@@ -2,10 +2,10 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Recipe } from '@/app/_types/Backend';
+import { Recipe } from '@/app/_types';
 
 type Props = {
-  recipe: Pick<Recipe, 'id' | 'recipeImages' | 'name' | 'overview'> & { numLikes: number; isPublic: boolean };
+  recipe: Recipe;
 };
 
 export const RecipeListItem: FC<Props> = ({ recipe: { id, recipeImages, name, overview, numLikes, isPublic } }) => {

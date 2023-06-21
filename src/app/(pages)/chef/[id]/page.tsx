@@ -1,13 +1,21 @@
 import { ChefDetailsInfo } from '@/app/_components/features/chef/ChefDetailsInfo/ChefDetailsInfo';
+import { dummyChefList } from '@/app/_data/dummyChef';
 
 const ChefDetailPage = ({ params }: { params: { id: string } }) => {
-  const name = 'しまぶ―';
-  const description = 'しまぶ―の説明';
-  const image = '/assets/dummyImage_200_300.png';
+  const chef = dummyChefList.filter((item) => item.id === params.id);
+  if (!chef) return <div></div>;
+
+  const { name, profile, imageUrl, numFollows, numRecipes } = chef[0];
 
   return (
     <div>
-      <ChefDetailsInfo name={name} description={description} image={image} numFollowers={100} numRecipes={100} />
+      <ChefDetailsInfo
+        name={name}
+        profile={profile}
+        imageUrl={imageUrl}
+        numFollows={numFollows}
+        numRecipes={numRecipes}
+      />
       ChefDetailPage: {params.id}
     </div>
   );
