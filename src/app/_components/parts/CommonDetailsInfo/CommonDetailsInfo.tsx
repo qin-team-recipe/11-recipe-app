@@ -2,11 +2,12 @@ import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 
 import { BackButton } from '@/app/_components/parts/BackButton';
+import { Chef, Recipe } from '@/app/_types/Backend';
 
 type Props = {
-  title: string;
-  description: string;
-  image: string;
+  title: Recipe['name'] | Chef['name'];
+  description: Recipe['overview'] | Chef['profile'];
+  image: Recipe['recipeImages'] | Chef['imageUrl'];
   children?: ReactNode;
 };
 
@@ -14,10 +15,18 @@ export const CommonDetailsInfo: FC<Props> = ({ title, description, image, childr
   return (
     <div className="relative">
       <div className="space-y-4">
-        <Image src={image} alt={`${title}の画像`} width={500} height={500} className="aspect-square" />
+        {image && (
+          <Image
+            src={Array.isArray(image) ? image[0].imageUrl : image}
+            alt={`${title}の画像`}
+            width={500}
+            height={500}
+            className="aspect-square"
+          />
+        )}
         <div className="space-y-4 px-4">
           <h1 className="text-[28px] font-bold">{title}</h1>
-          <p>{description}</p>
+          {description && <p>{description}</p>}
           {children}
         </div>
       </div>

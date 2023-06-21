@@ -2,13 +2,13 @@ import { RecipeDetailsInfo } from '@/app/_components/features/recipe/RecipeDetai
 import { dummyRecipeList } from '@/app/_data/dummyRecipe';
 
 const RecipeDetailPage = ({ params }: { params: { id: string } }) => {
-  const { name, description, image } = dummyRecipeList[0];
+  const { name, overview, recipeImages } = dummyRecipeList[0];
   return (
     <div>
       <RecipeDetailsInfo
         name={name}
-        description={description}
-        image={image}
+        overview={overview}
+        images={recipeImages}
         numLikes={100}
         chefId="1"
         chefName="しまぶ―"
