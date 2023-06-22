@@ -4,7 +4,7 @@ type Role = 'USER' | 'CHEF';
 
 type SiteType = 'TWITTER' | 'INSTAGRAM' | 'FACEBOOK' | 'YOUTUBE' | 'TIKTOK' | 'BLOG' | 'OTHER';
 
-type Link = {
+export type Link = {
   id: string;
   siteType: SiteType;
   // chef: Chef;
