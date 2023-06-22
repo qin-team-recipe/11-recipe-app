@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
+import { CopyButton } from '@/app/_components/parts/CopyButton';
 import { RecipeIngredient } from '@/app/_types/Recipe';
 
 import { AddToCartButton } from './AddToCartButton';
 import { DeleteFromCartButton } from './DeleteFromCartButton';
-import { CopyButton } from '@/app/_components/parts/CopyButton';
 
 type Props = {
   ingredients: RecipeIngredient[];
@@ -15,7 +15,6 @@ export const IngredientsList: FC<Props> = ({ ingredients }) => {
 
   return (
     <div>
-      
       <ul>
         {ingredients.map((ingredient) => (
           <li key={ingredient.id} className="flex items-center gap-x-2 border-b border-mauve-7 px-4 py-2">
