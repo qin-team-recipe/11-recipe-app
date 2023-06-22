@@ -11,12 +11,13 @@ export type Recipe = {
   servingSize: number;
   status: RecipeStatus;
   // likes: Like[];
-  numLikes: number; // FE only
   recipeImages: RecipeImage[];
   recipeSteps: RecipeStep[];
   recipeIngredients: RecipeIngredient[];
   // shoppingLists: ShoppingList[];
   // recipeLinks: RecipeLink[];
+} & {
+  numLikes: number; // FE only
   isPublic: boolean; // FE only
 };
 

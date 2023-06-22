@@ -24,7 +24,8 @@ export type Chef = {
   imageUrl?: string;
   links: Link[];
   // follows: Follow[];
-  numFollows: number; // FE only
   recipes: Recipe[];
+} & {
+  numFollows: number; // FE only
   numRecipes: number; // FE only
 };
