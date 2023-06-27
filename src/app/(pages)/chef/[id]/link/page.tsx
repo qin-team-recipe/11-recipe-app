@@ -1,4 +1,5 @@
 import { ChefDetailsInfo } from '@/app/_components/features/chef/ChefDetailsInfo/ChefDetailsInfo';
+import { LinkListTab } from '@/app/_components/features/chef/LinkListTab';
 import { LinkTab } from '@/app/_components/parts/LinkTab';
 import { dummyChefList } from '@/app/_data/dummyChef';
 
@@ -19,7 +20,8 @@ const ChefLinksPage = ({ params }: { params: { id: string } }) => {
     },
   ];
 
-  const { name, profile, imageUrl, numFollows, numRecipes } = chef[0];
+  // TODO: fetch
+  const { name, profile, imageUrl, numFollows, numRecipes, links } = chef[0];
 
   return (
     <div>
@@ -31,7 +33,7 @@ const ChefLinksPage = ({ params }: { params: { id: string } }) => {
         numRecipes={numRecipes}
       />
       <LinkTab tabs={tabs} />
-      ChefLinksPage: {params.id}
+      <LinkListTab links={links} />
     </div>
   );
 };
