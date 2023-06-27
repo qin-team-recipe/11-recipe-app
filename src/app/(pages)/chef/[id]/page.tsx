@@ -1,4 +1,5 @@
 import { ChefDetailsInfo } from '@/app/_components/features/chef/ChefDetailsInfo/ChefDetailsInfo';
+import { RecipeListTab } from '@/app/_components/features/chef/RecipeListTab';
 import { LinkTab } from '@/app/_components/parts/LinkTab';
 import { dummyChefList } from '@/app/_data/dummyChef';
 
@@ -21,6 +22,8 @@ const ChefDetailPage = ({ params }: { params: { id: string } }) => {
 
   const { name, profile, imageUrl, numFollows, numRecipes } = chef[0];
 
+  // TODO: レシピ渡す
+
   return (
     <div>
       <ChefDetailsInfo
@@ -31,7 +34,7 @@ const ChefDetailPage = ({ params }: { params: { id: string } }) => {
         numRecipes={numRecipes}
       />
       <LinkTab tabs={tabs} />
-      ChefDetailPage: {params.id}
+      <RecipeListTab recipeList={[]} />
     </div>
   );
 };
