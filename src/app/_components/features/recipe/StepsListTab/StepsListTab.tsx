@@ -7,7 +7,7 @@ type Props = {
   steps: RecipeStep[];
 };
 
-export const StepsList: FC<Props> = ({ steps }) => {
+export const StepsListTab: FC<Props> = ({ steps }) => {
   if (!steps) return <div>作り方が見つかりませんでした</div>;
 
   return (

@@ -1,5 +1,5 @@
 import { RecipeDetailsInfo } from '@/app/_components/features/recipe/RecipeDetailsInfo';
-import { StepsList } from '@/app/_components/features/recipe/StepsList';
+import { StepsListTab } from '@/app/_components/features/recipe/StepsListTab';
 import { LinkTab } from '@/app/_components/parts/LinkTab';
 import { dummyRecipeList } from '@/app/_data/dummyRecipe';
 
@@ -26,7 +26,7 @@ const RecipeDetailPage = ({ params }: { params: { id: string } }) => {
     <div>
       <RecipeDetailsInfo name={name} overview={overview} recipeImages={recipeImages} numLikes={numLikes} chef={chef} />
       <LinkTab tabs={tabs} />
-      <StepsList steps={recipeSteps} />
+      <StepsListTab steps={recipeSteps} />
     </div>
   );
 };

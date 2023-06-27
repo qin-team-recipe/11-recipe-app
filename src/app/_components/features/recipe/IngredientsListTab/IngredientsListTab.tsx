@@ -10,7 +10,7 @@ type Props = {
   ingredients: RecipeIngredient[];
 };
 
-export const IngredientsList: FC<Props> = ({ ingredients }) => {
+export const IngredientsListTab: FC<Props> = ({ ingredients }) => {
   if (!ingredients) return <div>材料が見つかりませんでした</div>;
 
   return (
