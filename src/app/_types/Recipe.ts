@@ -1,23 +1,51 @@
+import { Chef } from '@/app/_types';
+
+type RecipeStatus = 'CREATING' | 'DRAFT' | 'PUBLISHED' | 'UNPUBLISHED';
+
 export type Recipe = {
   id: string;
-  ownerId: string;
+  chef: Chef;
+  chefId: string;
   name: string;
-  description: string;
-  ingredients: Ingredient[];
-  instructions: Instruction[];
-  image: string;
-  numLikes: number;
-  numServings: number;
-  isPublic: boolean;
-  links: string[];
+  overview: string;
+  servingSize: number;
+  status: RecipeStatus;
+  // likes: Like[];
+  recipeImages: RecipeImage[];
+  recipeSteps: RecipeStep[];
+  recipeIngredients: RecipeIngredient[];
+  // shoppingLists: ShoppingList[];
+  // recipeLinks: RecipeLink[];
+} & {
+  numLikes: number; // FE only
+  isPublic: boolean; // FE only
 };
 
-export type Instruction = {
-  title: string;
+type RecipeStep = {
+  id: string;
+  // recipe: Recipe;
+  recipeId: string;
+  step: number;
   description: string;
 };
 
-export type Ingredient = {
-  name: string;
-  description: string;
+type RecipeIngredient = {
+  id: string;
+  // recipe: Recipe;
+  recipeId: string;
+  text: string;
+};
+
+// type RecipeLink = {
+//   id: string;
+//   url: string;
+//   recipe: Recipe;
+//   recipeId: string;
+// };
+
+type RecipeImage = {
+  id: string;
+  // recipe: Recipe;
+  recipeId: string;
+  imageUrl: string;
 };
