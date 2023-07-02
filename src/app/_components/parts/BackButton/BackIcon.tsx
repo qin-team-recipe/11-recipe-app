@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { IconProps } from '@/app/types/IconProps';
+import { IconProps } from '@/app/_types/IconProps';
 
 export const BackIcon: FC<IconProps> = ({ width = 32, height = 32 }) => {
   return (

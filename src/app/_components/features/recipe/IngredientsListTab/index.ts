@@ -1,0 +1,1 @@
+export { IngredientsListTab } from './IngredientsListTab';

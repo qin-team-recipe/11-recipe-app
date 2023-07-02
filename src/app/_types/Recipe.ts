@@ -21,7 +21,7 @@ export type Recipe = {
   isPublic: boolean; // FE only
 };
 
-type RecipeStep = {
+export type RecipeStep = {
   id: string;
   // recipe: Recipe;
   recipeId: string;
@@ -29,11 +29,13 @@ type RecipeStep = {
   description: string;
 };
 
-type RecipeIngredient = {
+export type RecipeIngredient = {
   id: string;
   // recipe: Recipe;
   recipeId: string;
   text: string;
+} & {
+  inCart: boolean; // FE only
 };
 
 // type RecipeLink = {
