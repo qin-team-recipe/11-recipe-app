@@ -34,9 +34,10 @@ export type RecipeIngredient = {
   // recipe: Recipe;
   recipeId: string;
   text: string;
-} & {
-  inCart: boolean; // FE only
 };
+// & {
+//   inShoppingList: boolean; // FE only
+// };
 
 // type RecipeLink = {
 //   id: string;
