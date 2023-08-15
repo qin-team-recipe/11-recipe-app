@@ -1,6 +1,6 @@
 import { ShoppingMemo } from '@/app/_types';
 
-export const dummyShoppingList: ShoppingMemo[] = [
+export const dummyShoppingMemo: ShoppingMemo[] = [
   {
     id: '1',
     userId: '1',
