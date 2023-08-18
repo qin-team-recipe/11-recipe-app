@@ -27,5 +27,31 @@ export const dummyShoppingList: ShoppingList[] = [
         isBought: false,
       },
     ],
+  },
+  {
+    id: '2',
+    userId: '1',
+    recipeId: '2',
+    recipe: RecipeList[1],
+    shoppingListIngredients: [
+      {
+        id: '1',
+        shoppingListId: '1',
+        name: '鶏もも肉 200g',
+        isBought: false,
+      },
+      {
+        id: '2',
+        shoppingListId: '1',
+        name: '玉ねぎ 1個',
+        isBought: true,
+      },
+      {
+        id: '3',
+        shoppingListId: '1',
+        name: '卵 3個',
+        isBought: false,
+      },
+    ],
   }
 ]

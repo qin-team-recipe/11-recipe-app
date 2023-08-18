@@ -63,7 +63,7 @@ export const dummyRecipeList: Recipe[] = [
     id: '2',
     chef: chefList[1],
     chefId: chefList[1].id,
-    name: '寿司',
+    name: '長いレシピ名長いレシピ名長いレシピ名長いレシピ名',
     overview: '新鮮なネタを使った伝統的な日本の寿司です。',
     servingSize: 2,
     status: 'PUBLISHED',
