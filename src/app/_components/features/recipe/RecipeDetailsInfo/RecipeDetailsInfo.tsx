@@ -4,8 +4,8 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { FollowLikeButton } from '@/app/_components/parts/ActionButtons/FollowLikeButton';
 import { CommonDetailsInfo } from '@/app/_components/parts/CommonDetailsInfo';
-import { FollowLikeButton } from '@/app/_components/parts/FollowLikeButton';
 import { Recipe } from '@/app/_types';
 
 type Props = Pick<Recipe, 'name' | 'overview' | 'recipeImages' | 'chef' | 'numLikes'>;

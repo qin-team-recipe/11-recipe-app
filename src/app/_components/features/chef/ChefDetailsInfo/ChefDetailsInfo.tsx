@@ -2,8 +2,8 @@
 
 import { FC } from 'react';
 
+import { FollowLikeButton } from '@/app/_components/parts/ActionButtons/FollowLikeButton';
 import { CommonDetailsInfo } from '@/app/_components/parts/CommonDetailsInfo';
-import { FollowLikeButton } from '@/app/_components/parts/FollowLikeButton';
 import { Chef } from '@/app/_types';
 
 type Props = Pick<Chef, 'name' | 'profile' | 'imageUrl' | 'numRecipes' | 'numFollows'>;
