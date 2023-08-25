@@ -1,10 +1,11 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
-import { ShoppingListHeading } from '../common/ShoppingListHeading';
+import { ShoppingListInput } from '../common/ShoppingListInput';
 import { ShoppingList as ShoppingListType } from '@/app/_types';
 
+import { ShoppingListHeading } from '../common/ShoppingListHeading';
 import { ShoppingListItem } from '../common/ShoppingListItem';
 
 type Props = {
@@ -14,9 +15,11 @@ type Props = {
 };
 
 export const ShoppingList: FC<Props> = ({ list, isFirst = false, isLast = false }) => {
+  const [isInputVisible, setIsInputVisible] = useState(false);
   return (
     <ul>
       <ShoppingListHeading
+        toggleInput={() => setIsInputVisible(true)}
         title={list.recipe.name}
         isFirst={isFirst}
         isLast={isLast}
@@ -26,6 +29,7 @@ export const ShoppingList: FC<Props> = ({ list, isFirst = false, isLast = false 
           <ShoppingListItem item={item} />
         </li>
       ))}
+      {isInputVisible && <ShoppingListInput />}
     </ul>
   );
 };

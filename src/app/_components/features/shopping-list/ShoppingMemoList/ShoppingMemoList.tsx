@@ -1,10 +1,11 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
-import { ShoppingListHeading } from '../common/ShoppingListHeading';
+import { ShoppingListInput } from '../common/ShoppingListInput';
 import { ShoppingMemo } from '@/app/_types';
 
+import { ShoppingListHeading } from '../common/ShoppingListHeading';
 import { ShoppingListItem } from '../common/ShoppingListItem';
 
 type Props = {
@@ -12,11 +13,13 @@ type Props = {
 };
 
 export const ShoppingMemoList: FC<Props> = ({ items }) => {
-  if (!items.length) return <div>ShoppingList is empty</div>;
+  const [isInputVisible, setIsInputVisible] = useState(false);
+
+  if (!items.length) return null;
 
   return (
     <div>
-      <ShoppingListHeading title="じぶんメモ" />
+      <ShoppingListHeading toggleInput={() => setIsInputVisible(true)} title="じぶんメモ" isMemo={true} />
       <ul>
         {items.map((item, i) => (
           <li key={item.id} className="flex">
@@ -25,6 +28,7 @@ export const ShoppingMemoList: FC<Props> = ({ items }) => {
             </div>
           </li>
         ))}
+        {isInputVisible && <ShoppingListInput />}
       </ul>
     </div>
   );
