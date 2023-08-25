@@ -11,10 +11,10 @@ const ListPage = () => {
       {/* ショッピングリスト */}
       {dummyShoppingList.length > 0 && (
         <ul>
-          {dummyShoppingList.map((item) => {
+          {dummyShoppingList.map((item, i) => {
             return (
               <li key={item.id}>
-                <ShoppingList list={item} />
+                <ShoppingList list={item} isFirst={i === 0} isLast={i === dummyShoppingList.length - 1} />
               </li>
             );
           })}

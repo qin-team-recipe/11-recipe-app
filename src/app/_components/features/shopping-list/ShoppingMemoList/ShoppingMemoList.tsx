@@ -18,10 +18,10 @@ export const ShoppingMemoList: FC<Props> = ({ items }) => {
     <div>
       <ShoppingListHeading title="じぶんメモ" />
       <ul>
-        {items.map((item) => (
+        {items.map((item, i) => (
           <li key={item.id} className="flex">
             <div className="flex-1">
-              <ShoppingListItem item={item} />
+              <ShoppingListItem item={item} isFirst={i === 0} isLast={i === items.length - 1} />
             </div>
           </li>
         ))}
