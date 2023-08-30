@@ -8,7 +8,7 @@ import { Link as LinkType } from '@/app/_types/Chef';
 
 type Props = Pick<LinkType, 'siteName' | 'siteType' | 'url' | 'accountName'>;
 
-export const LinkListItem: FC<Props> = ({ siteName, siteType, url, accountName }) => {
+export const LinkListItem: FC<Props> = ({ siteName, siteType, url, accountName = '@shimabu' }) => {
   // TODO: 他のアイコンも追加
   const iconUrl =
     siteType === 'TWITTER'

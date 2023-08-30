@@ -1,0 +1,1 @@
+export { ShoppingListInput } from './ShoppingListInput';

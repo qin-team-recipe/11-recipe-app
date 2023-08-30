@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { CopyButton } from '@/app/_components/parts/CopyButton';
+import { CopyButton } from '@/app/_components/parts/ActionButtons/CopyButton';
 import { RecipeStep } from '@/app/_types/Recipe';
 
 type Props = {

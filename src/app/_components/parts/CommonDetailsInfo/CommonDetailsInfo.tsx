@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Image from 'next/image';
 
-import { BackButton } from '@/app/_components/parts/BackButton';
+import { BackButton } from '@/app/_components/parts/ActionButtons/BackButton';
 import { Chef, Recipe } from '@/app/_types';
 
 type Props = {
